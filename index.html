@@ -22,25 +22,33 @@
 <section id="about">
     <h2>About Me</h2>
     <p>
-    I’m a <strong>Certified Test Automation Engineer</strong> and <strong>Professional Scrum Master</strong> with hands-on experience designing and maintaining robust automation frameworks. 
-    I specialize in tools like Java, Python, Cucumber, Jenkins, and SQL, and have a strong focus on building scalable, maintainable test solutions.
-    A continuous learner, I actively expand my skills through <strong>Coursera, Udemy and DataCamp</strong>, and thrive in agile, quality-focused environments. I’m passionate about driving
-     efficiency, improving processes, and delivering <strong>reliable, high-quality software.</strong>
+    I’m a <strong>Certified Test Automation Engineer</strong> and <strong>Professional Scrum Master</strong> with strong experience in designing and 
+    maintaining scalable test automation frameworks and backend systems. My expertise spans <strong>Java (Spring Boot), Python, 
+    Cucumber, Jenkins, and SQL.</strong>
+    I’m a continuous learner and thrive in agile, quality‑focused teams. Currently expanding my skills via Coursera, 
+    Udemy, and DataCamp. I’m passionate about process improvement, delivering reliable software, and ensuring quality 
+    throughout the development lifecycle.
     </p>
 </section>
 
 <section id="skills">
     <h2>Skills</h2>
-    <ul>
-		<li>Java 17+, Python, SQL</li>
-        <li>Selenium, Playwright, Cucumber, TestNG, JUnit, Mockito, JSON</li>
-        <li>MySQL, PostgreSQL, SQL Server, SQLite</li>
-        <li>CI/CD, GitHub Actions, Jira, Confluence, Scrum</li>
+    <ul><strong>Core Skills</strong>
+		<li>Java 17+, Spring Boot, REST APIs</li>
+        <li>Python (including test automation frameworks)</li>
+        <li>Test Automation: Selenium, Playwright, Cucumber, JUnit, TestNG</li>
+        <li>CI/CD: Jenkins, GitHub Actions</li>
         <li>HTML, CSS, JS, Bootstrap</li>
-        <li>Spring Boot 3, Spring Data JPA, Spring Security</li>
-        <li>RESTful APIs</li>
+        <li>Databases: MySQL, PostgreSQL, SQL Server</li>
+        <li>Agile Tools & Practices: Scrum, Jira, Confluence</li>
         <li>Pandas, Data Engineering, Datenanalyse</li>
         <li>Generative AI, Prompt Engineering, OpenAI API</li>
+    </ul>
+     <ul><strong>Currently Learning:</strong>
+		<li>Spring Security, Swagger / OpenAPI</li>
+        <li>JSON, Mocking frameworks (Mockito etc.)</li>
+        <li>Data Engineering basics (Pandas etc.)</li>
+        <li>Generative AI / Prompt Engineering / OpenAI APIs</li>
     </ul>
 </section>
 
@@ -71,21 +79,79 @@
 
     <div class="project">
         <!-- <h3>Employee Management System</h3> -->
-        <b>Employee Management System</b>:  A full-featured HR system with role-based access, validation, Swagger docs, and export features. 
-        <a href="https://github.com/Amblessed/employees" target="_blank"> View on GitHub</a></p>
+        <b>Employee Management System</b>: 
+        A robust HR system with multi‑role access control, detailed validation, Swagger‑powered API documentation, and 
+        data export features. Built with Spring Boot, PostgreSQL, and secured endpoints. 
+        Wrote full test suite including positive and negative cases. <a href="https://github.com/Amblessed/employees" target="_blank">[View on GitHub]</a>
+        
+        
+      <!--   A full-featured HR system with role-based access, validation, Swagger docs, and export features. 
+        <a href="https://github.com/Amblessed/employees" target="_blank"> View on GitHub</a></p> -->
     </div>
 
     <div class="project">
-        <h3>Secure Auth API</h3>
+        <h3>University Management System (Backend + Test Automation)</h3>
         <p>
-            A JWT-secured authentication and authorization backend using Spring Security and PostgreSQL.
+            <ul>
+                <li><strong>Tech Stack:</strong> <br>Java 17 · Spring Boot · Hibernate/JPA · PostgreSQL · REST APIs · Maven · JUnit 5 · Mockito · Testcontainers · Pytest (API testing) · GitHub Actions (CI/CD)</li>
+                <li><strong>Overview:</strong> <br>A backend system for managing university operations — including students, lecturers, faculties, departments, and course enrollment. 
+                    Designed with clean architecture, entity relationships, and strict validation rules to simulate a real-world academic management system.</li>
+                <li><strong>Key Features:</strong> <br>
+                    <strong>Entity Modeling:</strong>
+                    <ul>
+                        <li>Student, Lecturer, Department, Faculty, Program, Course with real academic rules (e.g. graduation date auto-calculated, department must belong to faculty).</li>
+                        <li>Person embedded entity reused across both students and lecturers.</li>
+                    </ul>
+                    <strong>Business Rules:</strong>
+                    <ul>
+                        <li>Enrollment date must be ≥ 3 months after admission.</li>
+                        <li>Graduation date auto-set to 4 years after enrollment.</li>
+                        <li>Faculty and department codes automatically generated (SEET-CHEM, SICT-CS, etc.).</li>
+                    </ul>
+                    <strong>REST API Endpoints:</strong>
+                    <ul>
+                        <li>CRUD for students, faculties, departments.</li>
+                        <li>Role-based access (Admin / Manager / Student).</li>
+                        <li>Error handling with descriptive JSON responses.</li>
+                    </ul>
+                </li>
+                <li><strong>Testing:</strong>
+                    <ul>
+                        <li>Unit tests with JUnit 5, Mockito, and Testcontainers for isolated, reliable testing.</li>
+                        <li>API tests using Pytest to validate endpoint functionality and error handling.</li>
+                        <li>CI/CD pipeline with GitHub Actions to automate testing on each commit.</li>
+                    </ul>
+                </li>
+                <li><strong>Learning Outcomes:</strong>
+                    <ul>
+                        <li>Deepened understanding of Spring Boot, JPA, and RESTful API design.</li>
+                        <li>Backend domain modeling with JPA/Hibernate</li>
+                        <li>Hands-on experience with test automation frameworks and CI/CD practices.</li>
+                        <li>Enforcing business rules with validations and service logic</li>
+                        <li>Enhanced ability to write clean, maintainable code with comprehensive test coverage.</li>
+                        <li>CI/CD pipelines for automated testing and deployment</li>
+                    </ul>
+            </ul>
+            
+            <strong
         </p>
         <a href="https://github.com/yourusername/secure-auth-api">View on GitHub</a>
     </div>
 </section>
 
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>I’m open to new opportunities in test automation / backend development. If you think my skills align with your 
+        needs — either contract or full‑time — I’d love to connect.</p>
+    <p>Email: <a href="mailto:onwumere.bright@gmail.com">onwumere.bright@gmail.com</a></p>
+    <p>Phone: +4917680495017</p>
+    
+</section>
+
+
 <footer>
-    <p>© 2025 Okechukwu Bright Onwumere • Esslingen, Germany • <a href="mailto:onwumere.bright@gmail.com">onwumere.bright@gmail.com</a></p>
+    <p>© 2025 Okechukwu Bright Onwumere • Esslingen, Germany • 
+    </p>
 </footer>
 
 </body>
