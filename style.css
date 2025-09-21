@@ -1,17 +1,20 @@
-/* ---------- Root Variables ---------- */
 :root {
   --primary: #007bff;
   --primary-dark: #0056b3;
   --dark: #212529;
   --light: #f8f9fa;
   --gray: #e9ecef;
+
+  --skills-bg: #e3f2fd;
+  --certificate-bg: #fff3e0;
+  --contact-bg: #e8f5e9;
+
   --text: #333;
   --radius: 10px;
   --shadow: 0 4px 12px rgba(0,0,0,0.08);
   --transition: 0.25s ease-in-out;
 }
 
-/* ---------- Global Styles ---------- */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -20,153 +23,48 @@ body {
   line-height: 1.7;
 }
 
-h1, h2, h3 {
-  margin: 0 0 0.75rem;
-  font-weight: 600;
-}
+h1,h2,h3{ margin:0; font-weight:600; }
+h2{ color: var(--primary); border-bottom:2px solid var(--primary); padding-bottom:0.25rem; margin-bottom:1rem; }
 
-h2 {
-  color: var(--primary);
-  border-bottom: 2px solid var(--primary);
-  display: inline-block;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-/* ---------- Header ---------- */
 header {
   background: var(--dark);
-  color: #fff;
-  padding: 3rem 1rem;
-  text-align: center;
+  color:#fff;
+  padding:3rem 1rem;
+  text-align:center;
 }
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
+header h1{ font-size:2rem; margin-bottom:0.3rem; }
+header p{ font-size:1.1rem; opacity:0.9; }
+header .links a{
+  margin:0 0.5rem; color:#fff; text-decoration:none; padding:0.4rem 0.8rem;
+  border:1px solid #fff; border-radius:var(--radius); transition:var(--transition);
 }
+header .links a:hover{ background:#fff; color:var(--dark); }
 
-header p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+section{ padding:3rem 1.5rem; max-width:1000px; margin:2rem auto; border-radius:var(--radius); }
+
+#skills{ background: var(--skills-bg); }
+#certificate{ background: var(--certificate-bg); }
+#contact{ background: var(--contact-bg); }
+
+ul{ padding-left:1.2rem; margin:0.5rem 0 1.5rem; }
+li{ margin-bottom:0.3rem; }
+
+.project,.course-project{
+  background:#fff; border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.5rem; margin-bottom:2rem; transition:transform var(--transition);
 }
+.project:hover,.course-project:hover{ transform:translateY(-4px); }
+.project h3,.course-project h3{ color: var(--dark); margin-top:0; }
 
-header .links {
-  margin-top: 1rem;
+.project a,.course-project a{
+  display:inline-block; margin:0.4rem 0.4rem 0 0; padding:0.45rem 0.9rem;
+  background:var(--primary); color:#fff; text-decoration:none; border-radius:5px;
+  font-size:0.9rem; transition:background var(--transition);
 }
+.project a:hover,.course-project a:hover{ background:var(--primary-dark); }
 
-header .links a {
-  margin: 0 0.5rem;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #fff;
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
+#mini-projects .course-projects-wrapper{ display:grid; gap:1.5rem; }
+@media(min-width:768px){ #mini-projects .course-projects-wrapper{ grid-template-columns:repeat(2,1fr); } }
 
-header .links a:hover {
-  background: #fff;
-  color: var(--dark);
-}
-
-/* ---------- Sections ---------- */
-section {
-  padding: 3rem 1.5rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Add subtle section backgrounds for contrast */
-#skills, #certificate {
-  background: var(--gray);
-  border-radius: var(--radius);
-  margin: 2rem auto;
-  padding: 2rem;
-}
-
-/* ---------- Lists ---------- */
-ul {
-  padding-left: 1.2rem;
-  margin: 0.5rem 0 1.5rem;
-}
-
-li {
-  margin-bottom: 0.3rem;
-}
-
-/* ---------- Project & Mini Project Cards ---------- */
-.project, .course-project {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  transition: transform var(--transition);
-}
-
-.project:hover, .course-project:hover {
-  transform: translateY(-4px);
-}
-
-.project h3, .course-project h3 {
-  color: var(--dark);
-  margin-top: 0;
-}
-
-/* ---------- Links as Buttons ---------- */
-.project a, .course-project a {
-  display: inline-block;
-  margin: 0.4rem 0.4rem 0 0;
-  padding: 0.45rem 0.9rem;
-  background: var(--primary);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  transition: background var(--transition);
-}
-
-.project a:hover, .course-project a:hover {
-  background: var(--primary-dark);
-}
-
-/* ---------- Grid Layout for Mini Projects ---------- */
-#mini-projects {
-  margin-top: 3rem;
-}
-
-#mini-projects h2 {
-  color: var(--primary);
-  border-bottom: 2px solid var(--primary);
-  display: inline-block;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Grid applies only to project cards, not the header */
-#mini-projects .course-projects-wrapper {
-  display: grid;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  #mini-projects .course-projects-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Course project cards */
-.course-project {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  transition: transform var(--transition);
-}
-
-.course-project:hover {
-  transform: translateY(-4px);
-}
-
-/* ---------- Footer ----*
+#contact{text-align:center;}
+footer{ text-align:center; padding:1rem; background:var(--dark); color:#fff; font-size:0.9rem; }
