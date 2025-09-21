@@ -66,5 +66,29 @@ li{ margin-bottom:0.3rem; }
 #mini-projects .course-projects-wrapper{ display:grid; gap:1.5rem; }
 @media(min-width:768px){ #mini-projects .course-projects-wrapper{ grid-template-columns:repeat(2,1fr); } }
 
+
+/* Mini Project Images */
+.project-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+}
+
+.project-image img {
+  width: 100%;          /* scale image to container */
+  height: auto;         /* maintain aspect ratio */
+  display: block;
+  object-fit: cover;    /* ensures image fills space nicely */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.project-image img:hover {
+  transform: scale(1.03); /* subtle hover zoom */
+}
+
+
 #contact{text-align:center;}
 footer{ text-align:center; padding:1rem; background:var(--dark); color:#fff; font-size:0.9rem; }
